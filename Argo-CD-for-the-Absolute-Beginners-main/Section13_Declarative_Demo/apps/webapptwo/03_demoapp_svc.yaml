@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webapptwo
+  name: webapptwo-svc
+spec:
+  ports:
+  - name: webapptwo-ports
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: webapptwo
+  type: NodePort

@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  labels:
+    app: webapptwo
+  name: webapptwo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/hazardsoft/ArgoCD.git
+    path: ./Argo-CD-for-the-Absolute-Beginners-main/Section13_Declarative_Demo/apps/webapptwo
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: webapptwo-ns
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
