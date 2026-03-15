@@ -4,7 +4,6 @@ metadata:
   labels:
     app: webappone
   name: webappone-svc
-  namespace: webappone-ns
 spec:
   ports:
   - name: webappone-ports

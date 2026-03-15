@@ -4,7 +4,6 @@ metadata:
   labels:
     app: webappone
   name: webappone-dep
-  namespace: webappone-ns
 spec:
   replicas: 1
   selector:
